@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Pensieve Design Tokens ─────────────────────────────────────── */
+
+:root {
+  /* Colors — Light Mode */
+  --color-background: #FAFAF8;
+  --color-surface: #FFFFFF;
+  --color-surface-elevated: #F5F5F0;
+  --color-primary: #2C2C2E;
+  --color-secondary: #636366;
+  --color-text-primary: #1C1C1E;
+  --color-text-secondary: #636366;
+  --color-text-tertiary: #AEAEB2;
+
+  /* Emotion Palette */
+  --color-emotion-calm: #7EC8B8;
+  --color-emotion-joy: #F5C563;
+  --color-emotion-tension: #E87461;
+  --color-emotion-grief: #8B9DC3;
+  --color-emotion-neutral: #A8A8A8;
+
+  /* Typography */
+  --font-display: "SF Pro Display", system-ui, sans-serif;
+  --font-heading: "SF Pro Display", system-ui, sans-serif;
+  --font-body: "SF Pro Text", system-ui, sans-serif;
+  --font-caption: "SF Pro Text", system-ui, sans-serif;
+  --font-mono: "SF Mono", ui-monospace, monospace;
+
+  /* Motion */
+  --duration-fast: 150ms;
+  --duration-base: 250ms;
+  --duration-slow: 400ms;
+  --easing-standard: cubic-bezier(0.4, 0.0, 0.2, 1);
+  --easing-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dark {
+  --color-background: #1C1C1E;
+  --color-surface: #2C2C2E;
+  --color-surface-elevated: #3A3A3C;
+  --color-primary: #F5F5F0;
+  --color-secondary: #AEAEB2;
+  --color-text-primary: #F5F5F0;
+  --color-text-secondary: #AEAEB2;
+  --color-text-tertiary: #636366;
+}
+
+/* ─── Base Styles ─────────────────────────────────────────────────── */
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── Utility Classes ─────────────────────────────────────────────── */
+
+.transition-standard {
+  transition-duration: var(--duration-base);
+  transition-timing-function: var(--easing-standard);
+}
+
+.transition-spring {
+  transition-duration: var(--duration-base);
+  transition-timing-function: var(--easing-spring);
+}

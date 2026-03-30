@@ -1,0 +1,9 @@
+{
+  "name": "@pensieve/shared",
+  "version": "0.1.0",
+  "description": "Shared type definitions for Pensieve",
+  "main": "types/events.ts",
+  "types": "types/events.ts",
+  "license": "UNLICENSED",
+  "private": true
+}
